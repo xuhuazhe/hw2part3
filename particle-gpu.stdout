@@ -1,0 +1,4 @@
+GPU allocation Bytes: 440012 (= 0.419628 MB)
+CPU-GPU copy time = 8.8e-05 seconds
+n = 2000, simulation time = 0.261576 seconds
+n = 2000, absmin = 0.806844, absavg = 0.961483
