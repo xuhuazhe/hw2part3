@@ -24,8 +24,8 @@ gpu_part3: gpu_part3.o common.o
 autograder: autograder.o common.o
 	$(CC) -o $@ $(NVCCLIBS) autograder.o common.o
 
-serial.o: serial.cu common.h
-	$(CC) -c $(CFLAGS) serial.cu
+serial.o: serial.cpp common.h
+	$(CC) -c $(CFLAGS) serial.cpp
 gpu.o: gpu.cu common.h
 	$(CC) -c $(NVCCFLAGS) gpu.cu
 gpu_part3.o: gpu_part3.cu common.h
