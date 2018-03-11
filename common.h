@@ -1,14 +1,8 @@
 #ifndef __CS267_COMMON_H__
 #define __CS267_COMMON_H__
 
-inline int mymin( int a, int b ) { return a < b ? a : b; }
-inline int mymax( int a, int b ) { return a > b ? a : b; }
-
-#define density 0.0005
-#define mass    0.01
-#define cutoff  0.01
-#define min_r   (cutoff/100)
-#define dt      0.0005
+inline int min( int a, int b ) { return a < b ? a : b; }
+inline int max( int a, int b ) { return a > b ? a : b; }
 
 //
 //  saving parameters
@@ -37,11 +31,11 @@ double read_timer( );
 //
 //  simulation routines
 //
-
 void set_size( int n );
 void init_particles( int n, particle_t *p );
-void apply_force( particle_t &particle, particle_t &neighbor );
+void apply_force( particle_t &particle, particle_t &neighbor , double *dmin, double *davg, int *navg);
 void move( particle_t &p );
+
 
 //
 //  I/O routines
